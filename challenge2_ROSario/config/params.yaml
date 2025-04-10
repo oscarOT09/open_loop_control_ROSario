@@ -1,0 +1,7 @@
+/path_ROSario:
+  ros__parameters:
+    coordenadas_x: [1.73205, -0.147334, 2.31468, 3.76468]
+    coordenadas_y: [1.0, 1.68404, 2.11816, -0.393313]
+    tiempo: [0.0, 0.0, 0.0, 0.0]
+    velocidad: [0.38, 0.38, 0.38, 0.38]
+    area: 10.0
