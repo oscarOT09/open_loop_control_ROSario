@@ -8,8 +8,8 @@ from rosario_path.msg import RosarioPath
 
 # Class Definition
 class PathNode(Node):
-    def _init_(self):
-        super()._init_('path_ROSario')
+    def __init__(self):
+        super().__init__('path_ROSario')
 
         self.t = []
 
@@ -90,8 +90,8 @@ class PathNode(Node):
             self.get_logger().info(f" El tamaño de vector 'x' no es el mismo que el vector 'y'")
             return
         
-        # Se ve si el array velocidad solo tiene un 0
-        if self.v[0]== 0:
+        # Se ve si el array velocidad no este vacio
+        if self.v[0] !=0:
             # Se compara que exista una velocidad para cada coordenada
             if len(self.x) == len(self.v):
                 for j in range (len(self.v)):
@@ -116,7 +116,7 @@ class PathNode(Node):
             else:
                 self.get_logger().info(f" No se a dado un vector de velocidad del mismo tamaño que coordenadas")
         # Se ve si el array tiempo no este vacio
-        elif self.t[0] == 0:
+        elif self.t[0] != 0:
             # Se compara que exista un tiempo para cada coordenada
             if len(self.x) == len(self.t):
                 for j in range (len(self.t)):
@@ -175,5 +175,5 @@ def main(args=None):
     rclpy.shutdown()
        
 #Execute Node
-if __name__ == '_main_':
+if __name__ == '__main__':
     main()
